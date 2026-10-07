@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,19 +13,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://esm.sh/react-image-crop@11.0.5/dist/ReactCrop.css">
     <style>
       :root {
         --dark-bg: #050505;
-        --primary-purple: #D90429; /* Changed to red */
-        --primary-purple-hover: #EF233C; /* Changed to brighter red */
+        --primary-purple: #E10600;
+        --primary-purple-hover: #FF2B1A;
         --accent-white: #F0F0F0;
-        --accent-gray: #8A8A8A;
-        --card-bg: #0D0D0D;
-        --border-color: rgba(217, 4, 41, 0.2); /* Changed to red */
-        --font-heading: 'Oswald', sans-serif; /* "Iron Punk" style: Bold, Uppercase */
-        --font-body: 'Roboto', sans-serif; /* "Blackbox" style: Clean, modern */
+        --accent-gray: #969696;
+        --card-bg: #101114;
+        --border-color: rgba(255, 255, 255, 0.10);
+        --font-heading: 'Bangers', 'Oswald', sans-serif;
+        --font-body: 'Roboto', sans-serif;
       }
 
       body {
@@ -49,7 +49,7 @@
       .ui-card {
         background: var(--card-bg);
         border: 1px solid var(--border-color);
-        border-radius: 12px;
+        border-radius: 16px;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
@@ -240,6 +240,47 @@
         animation: mascot-sway 4s ease-in-out infinite;
         transform-origin: bottom center;
       }
+    
+      :root {
+        --stahl-red: #E10600; --stahl-red-dark: #9E0000; --stahl-yellow: #FFC400;
+        --stahl-lime: #B8FF00; --stahl-purple: #6E2BFF; --stahl-blue: #27A8FF; --stahl-orange: #FF6B35;
+      }
+      body {
+        background:
+          radial-gradient(circle at 8% 0%, rgba(110,43,255,.16), transparent 25rem),
+          radial-gradient(circle at 95% 20%, rgba(225,6,0,.16), transparent 28rem),
+          #050505;
+      }
+      body::before {
+        content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; opacity:.28;
+        background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+        background-size:28px 28px;
+      }
+      .font-heading { font-family:var(--font-heading); letter-spacing:.05em; line-height:.95; }
+      .ui-card {
+        background:linear-gradient(145deg,rgba(21,23,27,.96),rgba(8,9,11,.98));
+        border-color:rgba(255,255,255,.09); border-radius:18px;
+        box-shadow:0 14px 40px rgba(0,0,0,.35);
+      }
+      .ui-card::before { content:""; position:absolute; top:0; left:0; width:76px; height:3px; background:var(--stahl-red); box-shadow:16px 0 var(--stahl-yellow),32px 0 var(--stahl-purple); }
+      .btn-primary { background:linear-gradient(135deg,var(--stahl-red),var(--stahl-red-dark)); border-color:#ff382a; border-radius:12px; box-shadow:0 7px 22px rgba(225,6,0,.22); }
+      .btn-primary:hover { background:linear-gradient(135deg,#ff2b1a,var(--stahl-red)); box-shadow:0 10px 30px rgba(225,6,0,.4); }
+      .btn-secondary { border-color:rgba(255,255,255,.18); border-radius:12px; background:rgba(255,255,255,.025); }
+      .btn-secondary:hover { border-color:var(--stahl-red); background:rgba(225,6,0,.10); }
+      .form-input { border-color:rgba(255,255,255,.12); border-radius:12px; background:rgba(0,0,0,.55); }
+      .form-input:focus { border-color:var(--stahl-red); box-shadow:0 0 0 3px rgba(225,6,0,.10),0 0 22px rgba(225,6,0,.12); }
+      .stahl-page { position:relative; min-height:100vh; }
+      .stahl-page::after { content:""; position:fixed; width:240px; height:70px; right:-55px; top:22%; background:var(--stahl-red); transform:rotate(-11deg); opacity:.08; pointer-events:none; z-index:-1; }
+      .stahl-brand-lockup { display:inline-flex; position:relative; align-items:center; justify-content:center; }
+      .stahl-brand-lockup::after { content:""; position:absolute; width:58%; height:6px; bottom:-2px; left:21%; background:var(--stahl-lime); transform:rotate(-3deg); border-radius:100%; }
+      .mascot-stage { position:relative; display:flex; justify-content:center; align-items:flex-end; }
+      .mascot-stage::before { content:""; position:absolute; width:180px; height:180px; border-radius:50%; background:radial-gradient(circle,rgba(255,196,0,.18),transparent 65%); }
+      .mascot-stage::after { content:"★"; position:absolute; right:5%; top:10%; color:var(--stahl-yellow); font-size:1.5rem; text-shadow:18px 25px 0 var(--stahl-purple),-28px 42px 0 var(--stahl-blue); }
+      .accent-tag { display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .7rem; border-radius:999px; background:rgba(184,255,0,.10); border:1px solid rgba(184,255,0,.35); color:var(--stahl-lime); font-family:var(--font-heading); }
+      .doodle-line { height:4px; width:70px; border-radius:999px; background:var(--stahl-lime); transform:rotate(-3deg); box-shadow:14px 7px 0 var(--stahl-purple); }
+      .loading-bar-inner { background:linear-gradient(90deg,transparent,var(--stahl-yellow),var(--stahl-red),transparent); }
+      .glitch-text { text-shadow:3px 0 var(--stahl-red),-3px 0 var(--stahl-blue); }
+
     </style>
     <script type="importmap">
 {
