@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="72" fill="#050505"/>
+<path d="M0 342h512v170H0z" fill="#E10600"/>
+<text x="256" y="280" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="112" font-weight="900" font-style="italic" fill="#fff">STAHL</text>
+<path d="M98 302 Q256 278 414 302" fill="none" stroke="#B8FF00" stroke-width="12" stroke-linecap="round"/>
+<circle cx="430" cy="80" r="14" fill="#FFC400"/><circle cx="75" cy="105" r="10" fill="#6E2BFF"/><circle cx="458" cy="130" r="8" fill="#27A8FF"/>
+</svg>
