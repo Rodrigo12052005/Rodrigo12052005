@@ -4,6 +4,7 @@ import { Eye, EyeOff } from 'lucide-react';
 import InstallPWAButton from '../components/InstallPWAButton';
 import { useAppContext } from '../context/AppContext';
 import { Role } from '../types';
+import { StahlMascot } from '../components/BrandAssets';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -59,11 +60,17 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
-      <div className="w-full max-w-sm text-center mb-8">
-        <h1 className="font-heading text-8xl text-[var(--primary-purple)]">STAHL</h1>
-        <h2 className="font-heading text-3xl mt-4 mb-2 text-white">BEM-VINDO!</h2>
-        <p className="font-body text-md text-gray-400">Faça login para continuar.</p>
+    <div className="stahl-page min-h-screen flex flex-col items-center justify-center p-4 relative">
+      <div className="w-full max-w-sm text-center mb-7">
+        <div className="mascot-stage h-52 mb-1">
+          <StahlMascot className="h-48 w-36 animate-mascot-sway relative z-10" />
+        </div>
+        <div className="stahl-brand-lockup">
+          <h1 className="font-heading text-7xl text-white">STAHL</h1>
+        </div>
+        <div className="doodle-line mx-auto mt-2" />
+        <h2 className="font-heading text-3xl mt-5 mb-2 text-white">BEM-VINDO!</h2>
+        <p className="font-body text-sm text-gray-400">Entre na sua jornada.</p>
       </div>
 
       <form onSubmit={handleLogin} className="w-full max-w-sm">
