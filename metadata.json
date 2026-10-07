@@ -1,0 +1,7 @@
+{
+  "name": "Stahl App",
+  "description": "A comprehensive application for Pathfinder clubs, featuring distinct roles for Pathfinders, Instructors, and Leaders to manage activities, achievements, and events.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
