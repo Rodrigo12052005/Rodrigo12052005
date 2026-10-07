@@ -1,0 +1,21 @@
+{
+  "name": "Stahl App",
+  "short_name": "Stahl",
+  "description": "A comprehensive application for Pathfinder clubs, featuring distinct roles for Pathfinders, Instructors, and Leaders to manage activities, achievements, and events.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#D90429",
+  "icons": [
+    {
+      "src": "/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
